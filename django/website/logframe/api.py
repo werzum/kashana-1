@@ -178,6 +178,9 @@ class IndicatorSerializer(ModelSerializer):
             'result',
             'source',
             'subindicators',
+            "question_content",
+            "question_category",
+            "question_active"
         )
 
 

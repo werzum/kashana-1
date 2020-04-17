@@ -34,7 +34,7 @@ def main(argv):
     ve_mgr.check_python_version(2, 6, __file__)
 
     force_update = False
-    full_rebuild = False
+    full_rebuild = True
     fake_update = False
     clean_ve = False
 

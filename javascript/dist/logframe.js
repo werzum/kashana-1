@@ -14469,13 +14469,131 @@ function program2(depth0,data) {
 this["Aptivate"] = this["Aptivate"] || {};
 this["Aptivate"]["data"] = this["Aptivate"]["data"] || {};
 this["Aptivate"]["data"]["templates"] = this["Aptivate"]["data"]["templates"] || {};
+this["Aptivate"]["data"]["templates"]["indicator-category"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", self=this;
+
+function program1(depth0,data) {
+  
+  
+  return "editable";
+  }
+
+function program3(depth0,data) {
+  
+  
+  return " missing";
+  }
+
+function program5(depth0,data) {
+  
+  var stack1, helper;
+  if (helper = helpers.question_category) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.question_category); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  }
+
+function program7(depth0,data) {
+  
+  var stack1;
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.editable), {hash:{},inverse:self.program(10, program10, data),fn:self.program(8, program8, data),data:data});
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  }
+function program8(depth0,data) {
+  
+  
+  return "Click to add question category";
+  }
+
+function program10(depth0,data) {
+  
+  
+  return "&nbsp;";
+  }
+
+  buffer += "<div data-name=\"question_category\" \n     class=\"";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.editable), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  stack1 = helpers.unless.call(depth0, (depth0 && depth0.question_category), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\"\n     >";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.question_category), {hash:{},inverse:self.program(7, program7, data),fn:self.program(5, program5, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</div>\n";
+  return buffer;
+  });;
+this["Aptivate"] = this["Aptivate"] || {};
+this["Aptivate"]["data"] = this["Aptivate"]["data"] || {};
+this["Aptivate"]["data"]["templates"] = this["Aptivate"]["data"]["templates"] || {};
 this["Aptivate"]["data"]["templates"]["indicator-container"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"indicator-detail\">\n    <div data-subview=\"indicatorName\"></div>\n    <div data-subview=\"indicatorDescription\"></div>\n</div>\n<div class=\"indicator-data\">\n    <div class=\"scrolling-container\">\n        <div class=\"indicator-data-table scrolling-table\">\n            <div data-subview=\"targetsTable\"></div>\n        </div>\n    </div>\n    <div class=\"indicator-source\">\n        <h3>Source</h3>\n        <div data-subview=\"indicatorSource\"></div>\n    </div>\n</div>\n";
+  return "<div class=\"indicator-detail\">\n    <div data-subview=\"indicatorName\"></div>\n    <div data-subview=\"indicatorDescription\"></div>\n</div>\n<div class=\"indicator-data\">\n    <div class=\"scrolling-container\">\n        <div class=\"indicator-data-table scrolling-table\">\n            <div data-subview=\"targetsTable\"></div>\n        </div>\n    </div>\n    <div class=\"indicator-source\">\n        <h3>Source?</h3>\n        <div data-subview=\"indicatorSource\"></div>\n    </div>\n    <div class=\"indicator-content\">\n        <h3>Question Content</h3>\n        <div data-subview=\"questionContent\"></div>\n    </div>\n    <div class=\"indicator-category\">\n        <h3>Question Category</h3>\n        <div data-subview=\"questionCategory\"></div>\n    </div>\n</div>\n";
+  });;
+this["Aptivate"] = this["Aptivate"] || {};
+this["Aptivate"]["data"] = this["Aptivate"]["data"] || {};
+this["Aptivate"]["data"]["templates"] = this["Aptivate"]["data"]["templates"] || {};
+this["Aptivate"]["data"]["templates"]["indicator-content"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", self=this;
+
+function program1(depth0,data) {
+  
+  
+  return "editable";
+  }
+
+function program3(depth0,data) {
+  
+  
+  return " missing";
+  }
+
+function program5(depth0,data) {
+  
+  var stack1, helper;
+  if (helper = helpers.question_content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.question_content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  }
+
+function program7(depth0,data) {
+  
+  var stack1;
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.editable), {hash:{},inverse:self.program(10, program10, data),fn:self.program(8, program8, data),data:data});
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  }
+function program8(depth0,data) {
+  
+  
+  return "Click to add question-content";
+  }
+
+function program10(depth0,data) {
+  
+  
+  return "&nbsp;";
+  }
+
+  buffer += "<div data-name=\"question_content\" \n     class=\"";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.editable), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  stack1 = helpers.unless.call(depth0, (depth0 && depth0.question_content), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\"\n     >";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.question_content), {hash:{},inverse:self.program(7, program7, data),fn:self.program(5, program5, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</div>\n";
+  return buffer;
   });;
 this["Aptivate"] = this["Aptivate"] || {};
 this["Aptivate"]["data"] = this["Aptivate"]["data"] || {};
@@ -17375,6 +17493,18 @@ define('views/indicator/container',[
                 return new EditableText({
                     model: this.model,
                     template_selector: "#indicator-source"
+                });
+            },
+            questionContent: function () {
+                return new EditableText({
+                    model: this.model,
+                    template_selector: "#indicator-content"
+                });
+            },
+            questionCategory: function () {
+                return new EditableText({
+                    model: this.model,
+                    template_selector: "#indicator-category"
                 });
             },
             targetsTable: function () {

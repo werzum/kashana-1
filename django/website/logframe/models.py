@@ -149,6 +149,9 @@ class Indicator(AverageTargetPercentMixin, models.Model):
     name = models.CharField(max_length=255, blank=True)
     description = models.TextField(null=True, blank=True)
     source = models.TextField(null=True, blank=True)
+    question_content = models.TextField(null=True, blank=True)
+    question_category = models.TextField(null=True, blank=True)
+    question_active = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -230,6 +233,9 @@ class SubIndicator(OrderedTerm):
     owner = 'indicator'
     indicator = models.ForeignKey(Indicator, related_name='subindicators')
     rating = models.ForeignKey("Rating", null=True, blank=True)
+    question_positive_responses = models.CharField(max_length=255, blank=True)
+    question_negative_responses = models.CharField(max_length=255, blank=True)
+    question_number_questionees = models.CharField(max_length=255, blank=True)
 
 
 @python_2_unicode_compatible

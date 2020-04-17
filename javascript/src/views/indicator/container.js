@@ -35,6 +35,18 @@ define([
                     template_selector: "#indicator-source"
                 });
             },
+            questionContent: function () {
+                return new EditableText({
+                    model: this.model,
+                    template_selector: "#indicator-content"
+                });
+            },
+            questionCategory: function () {
+                return new EditableText({
+                    model: this.model,
+                    template_selector: "#indicator-category"
+                });
+            },
             targetsTable: function () {
                 return new MilestoneTableView({
                     model: this.model,

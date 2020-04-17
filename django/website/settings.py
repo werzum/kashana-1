@@ -101,6 +101,7 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'waffle.middleware.WaffleMiddleware',
+    'corsapp.cors'
 )
 
 
@@ -162,6 +163,7 @@ INSTALLED_APPS = (
     'dashboard',
     'appconf',
     'export',
+#
 )
 
 AUTH_USER_MODEL = 'contacts.User'
@@ -198,6 +200,7 @@ LOGGING = {
         },
     }
 }
+
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
